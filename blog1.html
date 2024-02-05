@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container{
+            display: flex;
+        }
+        .image{
+            max-width: 20%;
+            padding-right:5%;
+        }
+    </style>
+</head>
+<body class="body">
+    <h1 class="main_heading">My First Blog</h1>
+    <div class="container">
+        <div class="text">
+            <p>
+                &#60 insert content &#62 <br>
+                &#60 below is some random text &#62 <br><br>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+            </p>
+        </div>
+    </div>
+    <p>Likes</p>
+    <button id="like" onclick="like()"><img id="like_image" src="pictures/thumbs-up-default.svg"></button><p id="count">781</p>
+    <h3 class="subheading">Take a look at my <a style="color:var(--link);"href="home.html">homepage</a></h3>
+    <section id="comment-section">
+        <h2 class="heading">Comments</h2>
+        <h3>Sakii0912</h3>
+        <p>Rich vocab, good blog</p>
+        <h3>Leovdz</h3>
+        <p>Badly written, poor language</p>
+        <h3>ThePurpleJedi</h3>
+        <p>This wholesome masterpiece brought tears to my eyes.</p>
+    </section>
+    <script>
+        function like(){
+            let img = document.getElementById("like_image");
+            console.log("like toggled");
+            if(img.src.includes("default")){
+                img.src="pictures/thumbs-up-green.svg";
+                let likeCount = parseInt(document.getElementById("count").innerText);
+                document.getElementById("count").innerText = (likeCount+1).toString();
+            }else{
+                img.src="pictures/thumbs-up-default.svg";
+                let likeCount = parseInt(document.getElementById("count").innerText);
+                document.getElementById("count").innerText = (likeCount-1).toString();
+            }
+        }
+    </script>
+</body>
+</html>

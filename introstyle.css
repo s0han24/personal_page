@@ -1,0 +1,134 @@
+.cd-intro-content h1,
+.cd-intro-content h3,
+.cd-intro-content p,
+.cd-intro-content .cd-btn {
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.cd-intro-content h1 {
+    animation-delay: 0.5s;
+}
+
+.cd-intro-content h3 {
+    animation-delay: 0.75s;
+}
+
+.cd-intro-content p {
+    animation-delay: 1s
+}
+
+.bouncy.cd-intro-content h1 {
+    animation-name: cd-bounce-right;
+}
+
+.bouncy.cd-intro-content h3 {
+    animation-name: cd-bounce-left;
+}
+
+.bouncy.cd-intro-content p {
+    animation-name: cd-bounce-right;
+}
+
+.bouncy.cd-intro-content h1,
+.bouncy.cd-intro-content h3,
+.bouncy.cd-intro-content p {
+    animation-duration: 0.6s;
+}
+
+.bouncy.cd-intro-content .cd-btn {
+    animation-name: cd-bounce-rotate;
+    animation-duration: 0.5s;
+}
+
+.bouncy.cd-intro-content .cd-btn.main-action {
+    animation-delay: 1.25s;
+}
+
+@keyframes cd-bounce-right {
+    0% {
+        opacity: .2;
+        transform: translateX(-200px);
+    }
+
+    60% {
+        opacity: .7;
+        transform: translateX(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes cd-bounce-left {
+    0% {
+        opacity: .2;
+        transform: translateX(200px);
+    }
+
+    60% {
+        opacity: .7;
+        transform: translateX(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes cd-bounce-rotate {
+    0% {
+        opacity: .2;
+        transform: perspective(800px) rotateX(-80deg);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    60% {
+        transform: perspective(800px) rotateX(20deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: perspective(800px) rotateX(0);
+    }
+}
+
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+.cd-intro {
+    display: flex;
+    height: 100%;
+    padding-top: 15%;
+    padding-left: 10%;
+    font-size: xx-large;
+}
+
+.cd-intro h1 {
+    color: #EEF5FF;
+}
+
+.cd-intro h3 {
+    color: #7FC7D9;
+}
+
+.cd-intro p {
+    color: #7FC7D9;
+}
+
+.cd-btn {
+    box-shadow: 6px 6px #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #7FC7D9;
+    padding: 7px;
+    text-align: center;
+}
